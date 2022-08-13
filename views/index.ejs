@@ -1,0 +1,41 @@
+<!-- INCLUDE HEADER -->
+<%-include('include/_header')%>
+<!-- /INCLUDE HEADER -->
+
+<!-- MAIN SITE -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">Add New Item<i class="fa-solid fa-user"></i></span>
+            </a>
+            <input type="text" id="myInp" placeholder="    Search Product.." onkeyup="searchFunc()">
+        </div>
+
+
+        <!-- FORM HANDLING -->
+        <form action="/" method="post">
+            <table class="table" id="myTable">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Company Name</th>
+                        <th>Product Name</th>
+                        <th>Product Type</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%-include('include/_show')%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- /MAIN SITE -->
+
+<!-- INCLUDE FOOTER -->
+<%- include('include/_footer')%>
+
+<!-- /INCLUDE FOOTER -->
